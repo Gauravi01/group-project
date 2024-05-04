@@ -1,12 +1,11 @@
 @extends('layouts.front')
 
 @section('title')
-    Wasthra Ceylon
+    Welcome to E-shop
 @endsection
 
 @section('content')
     @include('layouts.inc.slider')
-    
     <div class="py-5">
         <div class="container">
             <div class="row">
@@ -36,16 +35,17 @@
                 <div class="owl-carousel featured-carousel owl-theme">
                     @foreach ($trending_category as $tcategory)
                         <div class="item">
-                            <div class="card">
-                                <img src ="{{asset('assets/uploads/category/'.$tcategory->image)}}" alt="Product image" style="max-width: 300px; max-height: 300px;"> 
-                                <div class="card-body">
-                                    <h5>{{$tcategory->name}}</h5>
-                                    <p>
-                                        {{$tcategory->description}}
-                                    </p>
-                                    
-                                </div> 
-                            </div>
+                            <a href="{{url ('view-category/'.$tcategory->id)}}">
+                                <div class="card">
+                                    <img src ="{{asset('assets/uploads/category/'.$tcategory->image)}}" alt="Product image" style="max-width: 300px; max-height: 300px;"> 
+                                    <div class="card-body">
+                                        <h5>{{$tcategory->name}}</h5>
+                                        <p>
+                                            {{$tcategory->description}}
+                                        </p>
+                                    </div> 
+                                </div>
+                            </a>
                         </div>
                     @endforeach
                 </div>     
