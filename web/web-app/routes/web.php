@@ -2,17 +2,32 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
 
 
 
 
 Route::get('/' , [FrontendController::class, 'index']);
+Route::get('category',[FrontendController::class,'category']);
+Route::get('view-category/{id}', [FrontendController::class, 'viewcategory']);
+Route::get('category/{cate_id}/{prod_id}', [FrontendController::class,'productview']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('add-to-cart',[CartController::class, 'addProduct']);
+Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
+Route::post('update-cart', [CartController::class, 'updateCart']);
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('cart', [CartController::class, 'viewcart']);
+    Route::get('checkout', [CheckoutController::class, 'index']);
+    Route::post('place-order', [CheckoutController::class, 'placeOrder']);
+});
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', function (){
