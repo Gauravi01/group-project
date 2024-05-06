@@ -1,17 +1,19 @@
-@extends('layouts.front')
+@extends('layouts.admin')
 
 @section('title')
-    My Orders
+    Orders
 @endsection
 
 @section('content')
-    
-    <div class="container py-5">
+
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-primary">
-                        <h4 class="text-white">My Orders</h4>
+                        <h4 class="text-white">Order History
+                            <a href="{{'orders'}}" class="btn btn-warning float-right">New Orders</a>
+                        </h4>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
@@ -32,14 +34,14 @@
                                         <td>{{ $item->total_price}}</td>
                                         <td>{{ $item->status == '0' ?'Pending' : 'Completed'}}</td>
                                         <td>
-                                            <a href="{{url('view-order/'.$item->id)}}" class="btn btn-primary">View</a>
+                                            <a href="{{url('admin/view-order/'.$item->id)}}" class="btn btn-primary">View</a>
                                         </td>  
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
                     </div>
-                </div> 
+                </div>    
             </div>
         </div>
     </div>
