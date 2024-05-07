@@ -1,27 +1,49 @@
 @extends('layouts.front')
 
 @section('title')
-    Wasthra Ceylon
+    Welcome to E-shop
 @endsection
 
 @section('content')
     @include('layouts.inc.slider')
-    
     <div class="py-5">
         <div class="container">
             <div class="row">
-                <h2>Featured Products</h2>
+                <h2 class="text-center mb-3">Featured Products</h2>
                 <div class="owl-carousel featured-carousel owl-theme">
                     @foreach ($featured_products as $prod)
                         <div class="item">
-                            <div class="card">
-                                <img src ="{{asset('assets/uploads/products/'.$prod->image)}}" alt="Product image" style="max-width: 300px; max-height: 300px;"> 
+                            <div class="card h-100 mb-4"> <!-- Added mb-4 class for bottom margin -->
+                                <img src ="{{asset('assets/uploads/products/'.$prod->image)}}" class="card-img-top" alt="Product image" style="width: 100%; height: 200px; object-fit: cover;"> <!-- Added style attribute for fixed dimensions -->
                                 <div class="card-body">
-                                    <h5>{{$prod->name}}</h5>
-                                    <span class="float-start">{{$prod->selling_price}}</span>
-                                    <span class="float-end"><s>{{$prod->original_price}}</s></span>
+                                    <h5 class="card-title">{{$prod->name}}</h5>
+                                    <span class="float-start">Rs. {{$prod->selling_price}}</span>
+                                    <span class="float-end"><s>Rs. {{$prod->original_price}}</s></span>
                                 </div> 
                             </div>
+                        </div>
+                    @endforeach
+                </div>     
+            </div>
+        </div>
+    </div>
+
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center mb-3">Trending Categories</h2>
+                <div class="owl-carousel featured-carousel owl-theme">
+                    @foreach ($trending_category as $tcategory)
+                        <div class="item">
+                            <a href="{{url ('view-category/'.$tcategory->id)}}" class="text-decoration-none">
+                                <div class="card h-100 mb-4"> <!-- Added mb-4 class for bottom margin -->
+                                    <img src ="{{asset('assets/uploads/category/'.$tcategory->image)}}" class="card-img-top" alt="Category image" style="width: 100%; height: 200px; object-fit: cover;"> <!-- Added style attribute for fixed dimensions -->
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{$tcategory->name}}</h5>
+                                        <p class="card-text">{{$tcategory->description}}</p>
+                                    </div> 
+                                </div>
+                            </a>
                         </div>
                     @endforeach
                 </div>     

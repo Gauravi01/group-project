@@ -10,7 +10,9 @@ class FrontendController extends Controller
     public function index()
     {
         $fearured_products = Product::where('trending','1')->take(15)->get();
-        return view('frontend.index',compact('fearured_products'));
+        $trending_category = Category::where('popular','1')->take(15)->get();
+        return view('frontend.index',compact('fearured_products', 'trending_category'));
     }
+
 }
 
