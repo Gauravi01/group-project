@@ -37,23 +37,21 @@ class FrontendController extends Controller
     }
 
     public function productview($cate_id,$prod_id)
-    {
-        if(Category::where('id',$cate_id)->exists())
-        {
-            if(Product::where('category_id',$prod_id)->exists())
-            {
-                $products = Product::where('category_id',$prod_id)->first();
-                return view('frontend.products.productview',compact('products'));
-            }
-            else
-            {
-                return redirect('/')->with('status', "The link not found");
-            }
-        }
-        else
-        {
-            return redirect('/')->with('status', "Such Category does not exist");
-        }
+{
+    $category = Category::find($cate_id);
+    $products = Product::find($prod_id);
+
+    if(!$category) {
+        return redirect('/')->with('status', "Such Category does not exist");
     }
+
+    if(!$products || $products->category_id != $cate_id) {
+        return redirect('/')->with('status', "The product does not exist or does not belong to this category");
+    }
+
+    return view('frontend.products.productview', compact('products'));
+}
+
+    
 
 }
