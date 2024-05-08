@@ -7,6 +7,15 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <title>Slider with Text</title>
 </head>
+<style>
+    /* Adjust container width and margin */
+    .container {
+        max-width: 90%; /* Set the maximum width of the container */
+        margin-left: auto; /* Auto left margin to center the container */
+        margin-right: auto; /* Auto right margin to center the container */
+    }
+</style>
+
 <body>
 
 <div class="container">
@@ -42,7 +51,9 @@
     <div class="col-lg-4 align-self-center text-center">
       <h2>Text in the Middle of Right Side</h2>
       <p>This is some text content that you want to display on the right side of the page, next to the carousel.</p>
-      <button class="btn btn-success">Shop Now</button>
+      <button class="btn btn-success" style="background-color: #099d02;">
+        <a href="{{ route('login') }}">Shop Now</a>
+      </button>
     </div>
     
     <!-- Remaining space on the right -->
@@ -51,9 +62,10 @@
   </div>
 </div>
 
-
 <!-- Bootstrap JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>

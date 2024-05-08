@@ -6,7 +6,15 @@
 
 @section('content')
 
-<div class="py-3 mb-4 shadow-sm bg-warning border-top">
+<style>
+    .custom-bg-color {
+    background-color: #AFE1AF; /* Your custom color code */
+    /* You can also add other styling properties like padding, margin, etc. */
+}
+
+</style>
+
+<div class="py-3 mb-4 shadow-sm custom-bg-color border-top">
     <div class="container">
         <h6 class="mb-0">Collections / {{$category->name}}</h6>
     </div>
@@ -22,8 +30,8 @@
                                     <img src ="{{asset('assets/uploads/products/'.$prod->image)}}" alt="Product image" style="max-width: 300px; max-height: 300px;"> 
                                     <div class="card-body">
                                         <h5>{{$prod->name}}</h5>
-                                        <span class="float-start">{{$prod->selling_price}}</span>
-                                        <span class="float-end"><s>{{$prod->original_price}}</s></span>
+                                        <span class="float-start">Rs. {{$prod->selling_price}}</span>
+                                        <span class="float-end"><s>Rs. {{$prod->original_price}}</s></span>
                                     </div> 
                                 </a>
                             </div>

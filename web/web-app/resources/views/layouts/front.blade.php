@@ -36,7 +36,8 @@
     </style>
    
 </head>
-<body>
+<body style="background-color: #e5fbf4">
+
 
     @include('layouts.inc.frontnavbar')
 

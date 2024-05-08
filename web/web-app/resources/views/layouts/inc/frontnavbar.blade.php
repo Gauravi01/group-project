@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-color" style="background-color: #fff;">
   <div class="container">
     <a class="navbar-brand" href="{{url ('/')}}">
       <img src="{{ asset('assets/images/logo.png') }}" alt="Your Logo" height="40">
@@ -16,20 +16,28 @@
         <li class="nav-item" style="margin-left: 10px;">
           <a class="nav-link" href="{{url ('category')}}">Category</a>
         </li>
+        <li class="nav-item" style="margin-left: 10px;">
+          <a class="nav-link" href="">About Us</a>
+        </li>
+        <li class="nav-item" style="margin-left: 10px;">
+          <a class="nav-link" href="">Contact Us</a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto">
-        <!-- Cart link -->
+        <!-- Cart button -->
         <li class="nav-item">
-          <a class="nav-link mr-3" href="{{url ('cart')}}">
-            <i class="fa fa-shopping-cart mr-2"></i> My Cart
-          </a>
+          <button class="nav-link btn mr-3" style="background-color: #099d02 ; color:#fff; max-height: 150px;"  onclick="location.href='{{url ('cart')}}'">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="d-none d-sm-inline">Cart</span>
+          </button>
         </li>
         <!-- User login/register dropdown -->
         @guest
           <li class="nav-item">
-            <a class="nav-link" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="nav-link btn btn-success" style="background-color: #099d02; color:#fff;" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-user"></i>
-            </a>
+              <span class="d-none d-sm-inline">User</span>
+            </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
               @if (Route::has('login'))
                 <li>
@@ -45,9 +53,10 @@
           </li>
         @else
           <li class="nav-item dropdown">
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-              {{ Auth::user()->name }}
-            </a>
+            <button class="nav-link dropdown-toggle btn btn-success" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              <i class="fa fa-user"></i>
+              <span class="d-none d-sm-inline">{{ Auth::user()->name }}</span>
+            </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li>
                 <a href="{{url('my-order')}}" class="dropdown-item">

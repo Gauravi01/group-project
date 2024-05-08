@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="py-3 mb-4 shadow-sm bg-warning border-top">
+<div class="py-3 mb-4 shadow-sm bg-success border-top">
     <div class="container">
         <h6 class="mb-0">
             <a href="{{url('/')}}">
@@ -62,8 +62,10 @@
             </div>
         @else
             <div class="class-body text-center">
-                <h2>Your <i class="fa fa-shopping-cart"></i> Cart is Empty </h2>
-                <a href="{{url('category')}}" class="btn btn-outline-primary float-end">Continue Shopping</a>
+                <h2 class="mt-3">Your  Cart is Empty 
+                <i class="fa fa-shopping-cart"></i>
+                </h2>
+                <a href="{{url('category')}}" class="btn btn-outline-success float-end mb-3 mr-3">Continue Shopping</a>
             </div>
         @endif
     </div>

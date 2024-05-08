@@ -20,23 +20,6 @@
   background-color: rgb(0, 0, 0); 
 }
 
-.copyright-area{
-  padding: 14px 0px;
-  background-color: #262626;
-}
-.copyright-area p{
-  margin-bottom: 0px;
-  color: #fff;
-}
-.copyright-area .social-media{
-  text-align: end;
-}
-.copyright-area .social-media a{
-  margin: 0px 10px;
-  color: #fff;
-  width: 20px;
-}
-
 .roboto-thin {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
@@ -131,3 +114,7 @@
   }
 
 
+  .custom-navbar .container {
+    padding-left: 0;
+    padding-right: 0;
+}

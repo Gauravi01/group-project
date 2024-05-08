@@ -1,9 +1,73 @@
-<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .footer-area {
+            background-color: #355E3B;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .footer-area .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .footer-heading {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer-underline {
+            width: 50px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .mb-2 {
+            margin-bottom: 10px;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+       
+    /* Adjust container width and margin */
+    .container {
+        max-width: 90%; /* Set the maximum width of the container */
+        margin-left: auto; /* Auto left margin to center the container */
+        margin-right: auto; /* Auto right margin to center the container */
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Your page content here -->
+    </div>
     <div class="footer-area py-2">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <!-- <h4 class="footer-heading">Wasthra Ceylon</h4> -->
                     <a class="navbar-brand" href="{{url ('/')}}">
                         <img src="{{ asset('assets/images/logo.png') }}" alt="Your Logo" height="40">
                     </a>
@@ -49,20 +113,5 @@
             </div>
         </div>
     </div>
-    <!-- <div class="copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <p class="text-white">Copyright &copy; 2021 Wasthra Ceylon. All rights reserved.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="social-icons">
-                        <a href=""><i class="fa fa-facebook"></i></a>
-                        <a href=""><i class="fa fa-twitter"></i></a>
-                        <a href=""><i class="fa fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-</div>
+</body>
+</html>
