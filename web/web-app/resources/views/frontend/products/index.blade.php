@@ -14,7 +14,7 @@
 
 </style>
 
-<div class="py-3 mb-4 shadow-sm custom-bg-color border-top">
+<div class="py-3 mb-4 shadow-sm border-top">
     <div class="container">
         <h6 class="mb-0">Collections / {{$category->name}}</h6>
     </div>

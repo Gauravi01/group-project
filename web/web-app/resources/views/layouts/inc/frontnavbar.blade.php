@@ -25,8 +25,8 @@
       </ul>
       <ul class="navbar-nav ms-auto">
         <!-- Cart button -->
-        <li class="nav-item">
-          <button class="nav-link btn mr-3" style="background-color: #099d02 ; color:#fff; max-height: 150px;"  onclick="location.href='{{url ('cart')}}'">
+        <li class="nav-item mr-3">
+          <button class="nav-link btn" style="background-color: #099d02 ; color:#fff; max-height: 150px;"  onclick="location.href='{{url ('cart')}}'">
             <i class="fa fa-shopping-cart"></i>
             <span class="d-none d-sm-inline">Cart</span>
           </button>
@@ -53,7 +53,7 @@
           </li>
         @else
           <li class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle btn btn-success" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            <button class="nav-link dropdown-toggle btn btn-success" style="background-color: #099d02; color:#fff;" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
               <i class="fa fa-user"></i>
               <span class="d-none d-sm-inline">{{ Auth::user()->name }}</span>
             </button>

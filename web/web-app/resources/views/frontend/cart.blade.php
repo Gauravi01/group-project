@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="py-3 mb-4 shadow-sm bg-success border-top">
+<div class="py-3 mb-4 shadow-sm border-top">
     <div class="container">
         <h6 class="mb-0">
             <a href="{{url('/')}}">

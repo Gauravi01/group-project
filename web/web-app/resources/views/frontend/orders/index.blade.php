@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header bg-primary">
+                    <div class="card-header bg-success">
                         <h4 class="text-white">My Orders</h4>
                     </div>
                     <div class="card-body">
@@ -32,7 +32,7 @@
                                         <td>{{ $item->total_price}}</td>
                                         <td>{{ $item->status == '0' ?'Pending' : 'Completed'}}</td>
                                         <td>
-                                            <a href="{{url('view-order/'.$item->id)}}" class="btn btn-primary">View</a>
+                                            <a href="{{url('view-order/'.$item->id)}}" class="btn btn-success">View</a>
                                         </td>  
                                     </tr>
                                 @endforeach

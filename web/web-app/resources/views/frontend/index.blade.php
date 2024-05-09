@@ -51,6 +51,42 @@
         </div>
     </div>
 
+    <!-- Our Story Section -->
+    <!-- <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h2 class="mb-4">About Us</h2>
+                    <div class="row mr-3">
+                        <div class="col-md-4">
+                            <div class="oval-shape">
+                                <img src="" alt="Image 1"> 
+                                <div class="oval-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum tortor eu mi tempor, et luctus dolor iaculis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="oval-shape">
+                                 <img src="image2.jpg" alt="Image 2"> 
+                                <div class="oval-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum tortor eu mi tempor, et luctus dolor iaculis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="oval-shape">
+                                <img src="image3.jpg" alt="Image 3">
+                                <div class="oval-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum tortor eu mi tempor, et luctus dolor iaculis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 @endsection
 
 @section('scripts')
