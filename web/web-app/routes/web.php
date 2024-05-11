@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\WishlistController;
 
 
 
@@ -25,6 +26,8 @@ Route::post('add-to-cart',[CartController::class, 'addProduct']);
 Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
 Route::post('update-cart', [CartController::class, 'updateCart']);
 
+Route::post('add-to-wishlist',[WishlistController::class,'add']);
+Route::post('delete-wishlist-item',[WishlistController::class, 'deleteitem']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('cart', [CartController::class, 'viewcart']);
@@ -33,6 +36,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('my-order',[UserController::class, 'index']);
     Route::get('view-order/{id}', [UserController::class, 'view']);
+
+    Route::get('wishlist',[WishlistController::class,'index']);
+    
+    
     
 });
 

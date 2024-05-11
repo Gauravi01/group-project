@@ -69,8 +69,6 @@ class CartController extends Controller
 
     public function deleteProduct(Request $request)
     {
-        
-
         if(Auth::check())
         {
             $product_id = $request->input('product_id');

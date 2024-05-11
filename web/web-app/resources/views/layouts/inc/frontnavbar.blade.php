@@ -31,6 +31,12 @@
             <span class="d-none d-sm-inline">Cart</span>
           </button>
         </li>
+        <li class="nav-item mr-3">
+          <button class="nav-link btn" style="background-color: #099d02 ; color:#fff; max-height: 150px;"  onclick="location.href='{{url ('wishlist')}}'">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="d-none d-sm-inline">Wishlist</span>
+          </button>
+        </li>
         <!-- User login/register dropdown -->
         @guest
           <li class="nav-item">
