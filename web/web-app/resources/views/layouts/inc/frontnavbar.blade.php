@@ -24,26 +24,30 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
-        <!-- Cart button -->
+        <!-- Cart link -->
         <li class="nav-item mr-3">
-          <button class="nav-link btn" style="background-color: #099d02 ; color:#fff; max-height: 150px;"  onclick="location.href='{{url ('cart')}}'">
+          <a class="nav-link" href="{{url ('cart')}}">
             <i class="fa fa-shopping-cart"></i>
-            <span class="d-none d-sm-inline">Cart</span>
-          </button>
+            <span class="badge badge-pill bg-success cart-count">0</span>
+            <!-- <span class="d-none d-sm-inline">Cart</span> -->
+          </a>
         </li>
+        <!-- Wishlist link -->
         <li class="nav-item mr-3">
-          <button class="nav-link btn" style="background-color: #099d02 ; color:#fff; max-height: 150px;"  onclick="location.href='{{url ('wishlist')}}'">
-            <i class="fa fa-shopping-cart"></i>
-            <span class="d-none d-sm-inline">Wishlist</span>
-          </button>
+          <a class="nav-link" href="{{url ('wishlist')}}">
+            <i class="fa fa-heart"></i>
+            <span class="badge badge-pill bg-success wishlist-count">0</span>
+            <span></span>
+            <!-- <span class="d-none d-sm-inline">Wishlist</span> -->
+          </a>
         </li>
         <!-- User login/register dropdown -->
         @guest
           <li class="nav-item">
-            <button class="nav-link btn btn-success" style="background-color: #099d02; color:#fff;" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link btn btn-success" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-user"></i>
-              <span class="d-none d-sm-inline">User</span>
-            </button>
+              <!-- <span class="d-none d-sm-inline">User</span> -->
+            </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
               @if (Route::has('login'))
                 <li>
@@ -59,10 +63,10 @@
           </li>
         @else
           <li class="nav-item dropdown">
-            <button class="nav-link dropdown-toggle btn btn-success" style="background-color: #099d02; color:#fff;" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
               <i class="fa fa-user"></i>
               <span class="d-none d-sm-inline">{{ Auth::user()->name }}</span>
-            </button>
+            </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li>
                 <a href="{{url('my-order')}}" class="dropdown-item">
