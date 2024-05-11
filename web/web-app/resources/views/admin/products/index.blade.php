@@ -13,7 +13,7 @@
                         <th>ID</th>
                         <th>Category</th>
                         <th>Name</th>
-                        <th>Selling Price</th>
+                        <th>Selling Price(Rs.)</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
