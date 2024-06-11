@@ -29,7 +29,7 @@
                                 <img src="{{asset('assets/uploads/products/' .$item->image)}}" class="cate-image" alt="Image here">
                             </td>
                             <td>
-                                <a href="{{ url('edit-prod/' .$item->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="{{ url('edit-prod/' .$item->id) }}" class="btn btn-success btn-sm">Edit</a>
                                 <a href="{{url('delete-prod/'.$item->id)}}" class="btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>

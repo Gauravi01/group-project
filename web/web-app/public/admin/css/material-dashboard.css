@@ -157,14 +157,14 @@ sup {
 }
 
 a {
-  color: #9c27b0;
+  color: #27b072;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #0a6ebd;
+  color: #52d26b;
   text-decoration: underline;
 }
 
@@ -578,7 +578,7 @@ sup {
 }
 
 a {
-  color: #9c27b0;
+  color: #119e28;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -949,7 +949,7 @@ samp {
 
 code {
   font-size: 87.5%;
-  color: #e91e63;
+  color: #25ed82;
   word-break: break-word;
 }
 

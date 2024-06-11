@@ -44,7 +44,7 @@
         <!-- User login/register dropdown -->
         @guest
           <li class="nav-item">
-            <a class="nav-link btn btn-success" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-user"></i>
               <!-- <span class="d-none d-sm-inline">User</span> -->
             </a>

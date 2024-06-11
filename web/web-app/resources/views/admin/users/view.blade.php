@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4>User  Details
-                            <a href="{{url('users')}}" class="btn btn-primary btn-sm float-right">Back</a>
+                            <a href="{{url('users')}}" class="btn btn-success btn-sm float-right">Back</a>
                         </h4>
                         <hr>
                     </div>
