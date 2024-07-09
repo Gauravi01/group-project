@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="py-3 mb-4 shadow-sm border-top">
-        <div class="container">
+        <div class="container ">
             <h6 class="mb-0">
                 <a href="{{url('/')}}">
                     Home
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div class="container mt-3">
+    <div class="container mt-3 py-3">
         <form action="{{url('place-order')}}" method="POST">
             {{csrf_field()}}
             <div class="row">
@@ -103,7 +103,7 @@
                             <hr>
                             <button type="submit" class="btn btn-success w-100">Place Order | COD</button>
                             <!--  w-100 -->
-                            <button type="button" class="btn btn-primary w-100 mt-3 razorpay_btn">Pay With Razorpay</button>
+                            <!-- <button type="button" class="btn btn-primary w-100 mt-3 razorpay_btn">Pay With Razorpay</button> -->
                         @else
                             <h4 class="text-center">No Products in Cart</h4>
                         @endif
@@ -115,3 +115,7 @@
     </div>
 
 @endsection
+<!-- 
+@section('scripts')
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+@endsection -->

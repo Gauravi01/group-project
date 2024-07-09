@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Rating;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
@@ -45,11 +47,25 @@ class FrontendController extends Controller
         return redirect('/')->with('status', "Such Category does not exist");
     }
 
-    if(!$products || $products->category_id != $cate_id) {
+    if(!$products || $products->category_id != $cate_id) 
+    {
+       
         return redirect('/')->with('status', "The product does not exist or does not belong to this category");
     }
 
-    return view('frontend.products.productview', compact('products'));
+    $ratings = Rating::where('prod_id',$products->id)->get();
+    $rating_sum = Rating::where('prod_id',$products->id)->sum('stars_rated');
+    $user_rating = Rating::where('prod_id',$products->id)->where('user_id',Auth::id())->first();
+    if($ratings->count() > 0) 
+    {
+        $rating_value = $rating_sum/$ratings->count();
+    }
+    else 
+    {
+        $rating_value = 0;
+    }
+    
+    return view('frontend.products.productview', compact('products','ratings','rating_value','user_rating'));
 }
 
     

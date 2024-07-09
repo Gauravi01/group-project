@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="container py-5">
     <div class="card shadow ">
         @if($cartitems->count() > 0)
             <div class="card-body">

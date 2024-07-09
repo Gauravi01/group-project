@@ -79,7 +79,7 @@ class CheckoutController extends Controller
     return redirect('/')->with('status', "Order Placed Successfully");
     }
 
-    function razorpaycheck(Request $request){
+    public function razorpaycheck(Request $request){
         
         $cartitems = Cart::where('user_id', Auth::id())->get();
         $total_price = 0;
