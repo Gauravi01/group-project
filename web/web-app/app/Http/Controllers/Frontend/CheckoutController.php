@@ -26,7 +26,7 @@ class CheckoutController extends Controller
     }
 
     public function placeOrder(Request $request)
-{
+    {
     $order = new Order();
     $order->user_id = Auth::id();
     $order->fname = $request->input('fname');
@@ -77,6 +77,37 @@ class CheckoutController extends Controller
 
     // Redirect back with success message
     return redirect('/')->with('status', "Order Placed Successfully");
-}
+    }
+
+    function razorpaycheck(Request $request){
+        
+        $cartitems = Cart::where('user_id', Auth::id())->get();
+        $total_price = 0;
+        foreach($cartitems as $item)
+        {
+            $total_price += $item->products->selling_price * $item->prod_qty;
+        }
+
+        $firstname=$request->input('firstname');
+        $lastname=$request->input('lastname');
+        $address1=$request->input('address1');
+        $address2=$request->input('address2');
+        $phone=$request->input('phone');
+        $email=$request->input('email');
+        $city=$request->input('city');
+        $postalCode=$request->input('postalCode');
+
+        return response()->json([
+            ' firstname' => $firstname,
+            ' lastname' => $lastname,
+            ' address1' => $address1,
+            ' address2' => $address2,
+            ' phone' => $phone,
+            ' email' => $email,
+            ' city' => $city,
+            ' postalCode' => $postalCode,
+            'total_price'=>$total_price
+        ]);
+    }
 
 }

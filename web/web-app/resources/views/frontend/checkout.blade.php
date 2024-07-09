@@ -32,35 +32,42 @@
                             <div class="col-md-6">
                                 <label for="">First Name</label>
                                 <input type="text" class="form-control firstname" value="{{Auth::user()->name}}" name="fname" placeholder="Enter First Name">
-                                <span id="fname_error"></span>
+                                <span id="fname_error" class="text-danger"></span>
                             </div>
                             <div class="col-md-6">
                                 <label for="">Last Name</label>
                                 <input type="text" class="form-control lastname" value="{{Auth::user()->Lname}}" name="lname" placeholder="Enter Last Name">
+                                <span id="lname_error" class="text-danger"></span>
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="">Address 1</label>
                                 <input type="text" class="form-control address1" value="{{Auth::user()->address1}}" name="address1" placeholder="Enter Address 1">
+                                <span id="address1_error" class="text-danger"></span>
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="">Address 2</label>
                                 <input type="text" class="form-control address2" value="{{Auth::user()->address2}}" name="address2" placeholder="Enter Address 2">
+                                <span id="address2_error" class="text-danger"></span>
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="">Phone Number</label>
                                 <input type="text" class="form-control phone" value="{{Auth::user()->phone}}" name="phone" placeholder="Enter Phone Number">
+                                <span id="phone_error" class="text-danger"></span>
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="">E mail</label>
                                 <input type="text" class="form-control email" value="{{Auth::user()->email}}" name="email" placeholder="Enter E mail">
+                                <span id="email_error" class="text-danger"></span>
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="">City</label>
                                 <input type="text" class="form-control city" value="{{Auth::user()->city}}" name="city" placeholder="Enter City">
+                                <span id="city_error" class="text-danger"></span>
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="">Postal Code</label>
                                 <input type="text" class="form-control postalCode" value="{{Auth::user()->postalCode}}" name="postalCode" placeholder="Enter Postal Code">
+                                <span id="postalCode_error" class="text-danger"></span>
                             </div>
                             </div>
                         </div>

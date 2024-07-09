@@ -47,11 +47,11 @@
                                 </div>
 
                                 <div class="mb-0">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-success">
                                         {{ __('Login') }}
                                     </button>
                                     @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        <a class="btn btn-link text-success" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
                                     @endif
@@ -64,4 +64,38 @@
         </div>
     </div>
 </div>
+
+<style>
+    .form-control:focus {
+        border-color: green;
+        box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.25);
+    }
+
+    .btn-success {
+        background-color: green;
+        border-color: green;
+    }
+
+    .btn-success:hover {
+        background-color: darkgreen;
+        border-color: darkgreen;
+    }
+
+    .text-success {
+        color: green !important;
+    }
+
+    .text-success:hover {
+        color: darkgreen !important;
+    }
+
+    .form-check-input:checked {
+        background-color: green;
+        border-color: green;
+    }
+
+    .invalid-feedback strong {
+        color: red; /* Optional: keep error messages in red for better visibility */
+    }
+</style>
 @endsection
