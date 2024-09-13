@@ -71,8 +71,9 @@
     
     <!-- Text content in the middle of right side -->
     <div class="col-lg-4 align-self-center text-center">
-      <h2>Text in the Middle of Right Side</h2>
-      <p>This is some text content that you want to display on the right side of the page, next to the carousel.</p>
+      <h2>Your One Stop Shop for All Things Banana!</h2>
+      <p>Join us on a journey of flavour, health and sustainability..
+      </p>
       <button class="btn btn-outline-success">
         <a href="{{ route('login') }}" >Shop Now</a>
       </button>

@@ -8,6 +8,7 @@ use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\RatingController;
+use App\Http\Controllers\Frontend\ReviewController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\WishlistController;
@@ -44,6 +45,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('view-order/{id}', [UserController::class, 'view']);
 
     Route::post('add-rating',[RatingController::class,'add'])->name('add-rating');
+
+    Route::get('add-review/{product_description}/userreviews', [ReviewController::class, 'add'])->name('add-review');
+    Route::post('add-review',[ReviewController::class, 'create']);
+
 
     Route::get('wishlist',[WishlistController::class,'index']);
 
