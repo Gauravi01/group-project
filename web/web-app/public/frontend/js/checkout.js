@@ -76,9 +76,11 @@ $(document).ready(function(){
             $('#postalCode_error').html('');
         }
 
-        if(fname_error != '' || lname_error != '' || address1_error != '' || address2_error != '' || phone_error != '' || email_error != '' || city_error != '' || postalCode_error != '') {
+        if(fname_error != '' || lname_error != '' || address1_error != '' || address2_error != '' || phone_error != '' || email_error != '' || city_error != '' || postalCode_error != '') 
+        {
             return false;
-        } else {
+        } 
+        else {
             var data = {
                 '_token': $('meta[name="csrf-token"]').attr('content'), // Add CSRF token here
                 'firstname': firstname,

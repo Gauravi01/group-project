@@ -140,29 +140,33 @@
                             <br />
                             @if($products->qty > 0)
                                 <button type="button" class="btn btn-success me-3 addToCartBtn float-start">Add to Cart <i class="fa fa-shopping-cart"></i></button>
+                            <!-- @else
+                                <label class="badge bg-danger">Out of Stock</label> -->
+                            
                              @endif
                                 <button type="button" class="btn btn-success me-3 addToWishlist float-start">Add to Wishlist <i class="fa fa-heart"></i></button>  
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12">
+                    <div class="col-md-12">
+                    <hr>
+                    <h3>Description</h3>
+                    <p class ="mt-3">
+                        {!! $products->description !!}
+                    </p>  
+                </div>
                 <hr>
-                <h3>Description</h3>
-                <p class ="mt-3">
-                    {!! $products->description !!}
-                </p> 
-                
-                
+            </div>
+            <div class="row">
+                <div class="col md-4">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Rate this product
+                    </button> 
+                    <a href="{{ url('add-review/'.$products->description.'/userreviews') }}" class="btn btn-link">Write a Review</a>
+                </div>
               
             </div>
-            <hr>
-            <div class="col-md-12">
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Rate this product
-                </button>
-            </div>
-        </div>
+        </div> 
     </div>
 </div>
 
